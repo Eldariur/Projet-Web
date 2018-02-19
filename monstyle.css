@@ -1,0 +1,82 @@
+html, body {
+ margin: 10px;
+ padding: 10px;
+ }
+body {
+ background-color: #191970; 
+ font-family: Verdana, sans-serif; 
+ font-size: 100%;
+ 
+ }
+legend {
+ background-color: #8B0000
+ }
+h1 {
+ font-size: 200%; 
+ color: #006400; 
+ text-align: center;
+ }
+h2 {
+ font-size: 150%; 
+ color: #8FBC8F; 
+ padding-left: 15px;
+ }
+p,ul,li,td,th {
+ color: #DCDCDC; 
+ }
+a:link {
+ color: #DCDCDC;
+ text-decoration: underline;
+ }
+a:visited {
+ color: #8FBC8F;
+ }
+a:hover {
+ color: #00CED1;
+ text-decoration: none;
+}
+a:active, a:focus {
+ color: #034078;
+}
+
+div.form-group { 
+ color:#DCDCDC;
+}
+div.headlog {
+ color:#DCDCDC;
+ text-align:right;
+}
+div.disconnect {
+ color:#DCDCDC;
+ text-align:left;
+}
+legend{
+ color:#DCDCDC;
+}
+
+table{
+ animation-duration: 3s;
+ animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+table {
+
+border-collapse : collapse;
+}
+
+th,td {
+
+border : 1px solid black;
+}

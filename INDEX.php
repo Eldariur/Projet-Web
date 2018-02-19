@@ -45,7 +45,26 @@
     if(!isset($_SESSION['id']) AND !isset($_SESSION['name']))
     {
     ?>
-      <p>Créez un compte et connectez vous pour pouvoir avoir accès à l'espace <strong>Évenements</strong>.</p>
+	<br><br><br>
+
+	<p>
+	Evénements :
+	 
+	</p>
+	<br>
+	<p>
+	Tournoi StarCraft 2 	
+	</p>
+<br>
+	<p>
+	LAN : Warcraft 3	
+	</p>
+	
+
+
+
+	<br><br><br>
+      <p>Créez un compte et connectez vous pour pouvoir vous inscrire aux <strong>Évenements</strong>.</p>
     <?php
     }
 
@@ -59,8 +78,9 @@
 
 
     ?>
+	
     <br/><br/><br/><br/>
-    <p><a href="EVENT.php">Evenements</a></p>
+    <p>Cliquez <a href="EVENT.php">ici</a> pour vous inscrire à un événement</p>
 
     <?php
 

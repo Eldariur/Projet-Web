@@ -11,7 +11,7 @@
 	
 	<?php
 	try{
-		$bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+		$bdd = new PDO('mysql:host=localhost;dbname=l2info;charset=utf8', 'l2infoetu', 'webdyn72');
 	}
 	catch (Exception $e){
 		die('Erreur : ' . $e->getMessage());
@@ -32,6 +32,7 @@
 
 
 	?>
+	
 	<p>Vous vous êtes bien inscrit <?php echo htmlspecialchars($_POST['prenom']); ?> .</p>
 	<p>Cliquez <a href="LOGIN.php">ici</a> pour vous log</p>
 </body>

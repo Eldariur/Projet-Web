@@ -78,6 +78,7 @@
    			S'inscrire </button></center>	
    			</form>
             
+	    
             <script type="text/javascript">
                var frmvalidator = new Validator("Register");
                //E-mail validator
@@ -96,7 +97,7 @@
                //Promo validator
                frmvalidator.addValidation("promotion","selone","Vous devez indiquer votre promotion");
                //Charte
-               frmvalidator.addValidation("Charte","shouldselchk=charte","Vous devez valider la charte");
+               frmvalidator.addValidation("charte","shouldselchk=charte","Vous devez valider la charte");
 
             </script>
 

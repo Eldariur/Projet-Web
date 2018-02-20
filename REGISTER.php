@@ -10,7 +10,7 @@
 
    <body>
    				<header><div class="headlog"><p><a href="LOGIN.php">Se connecter</a> </div></header>
-				<form id='Register' method="post" action="action.php">
+				<form id='Register' method="post" action="actionRegister.php">
    				<legend><center>S'inscrire sur l'espace membre ASIMOV</center></legend>
    				
    				<div class="form-group">
@@ -46,7 +46,7 @@
 
             <p>
 
-                  Veuillez indiquer votre promotion :<br />
+                  Promotion :<br />
 
                   <input type="radio" name="promotion" value="L1" id="L1" /> <label for="L1">L1</label><br />
 

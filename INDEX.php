@@ -48,16 +48,16 @@
 	<br><br><br>
 
 	<p>
-	Evénements :
+	<strong>Evénements :</strong>
 	 
 	</p>
 	<br>
 	<p>
-	Tournoi StarCraft 2 	
+	<a href="EVENTSC2.php">Tournoi StarCraft 2</a> 
 	</p>
 <br>
 	<p>
-	LAN : Warcraft 3	
+	<a href="EVENTWC3.php">LAN Warcraft 3</a>	
 	</p>
 	
 
@@ -69,26 +69,6 @@
     }
 
     ?>
-    
-    <?php
-    
-    if(isset($_SESSION['id']) AND isset($_SESSION['name']))
-    {
-      echo 'Salut ' . $_SESSION['name'];
-
-
-    ?>
-	
-    <br/><br/><br/><br/>
-    <p>Cliquez <a href="EVENT.php">ici</a> pour vous inscrire à un événement</p>
-
-    <?php
-
-    }
-
-    ?>
-
-
 
 
    </body>

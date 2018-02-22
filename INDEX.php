@@ -35,7 +35,7 @@
 
     ?>
 
-		<legend><center>Espace Membre ASIMOV</center></legend>
+		
     <br/><br/><br/><br/>
 
     <h1>Bienvenue sur l'espace membre ASIMOV </h1>

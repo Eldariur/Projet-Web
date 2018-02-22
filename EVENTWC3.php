@@ -3,10 +3,10 @@
    <head>
 
     	<meta charset="UTF-8">
-    	<title></title>
+    	<title>Evenement WC3</title>
     	<link href="monstyle.css" rel="stylesheet" media="all">
 	
-	<script src="gen_validatorv4.js" type="text/javascript"></script>
+	<script src="gen_validatorv4.js" ></script>
 	
    </head>
 
@@ -37,7 +37,7 @@
     $req->closeCursor();
     $dispo = 16;
     ?>
-		<legend><center>Espace Évenements ASIMOV</center></legend>
+		
     <br/><br/><br/><br/>
     
     <br/><br/><br/><br/>
@@ -88,18 +88,18 @@
 
                   Souhaitez-vous ramener vous-même votre nourriture ?<br />
 
-                  <input type="radio" name="nourriture" value="Oui" id="Oui" /> <label for="Oui">Oui</label><br />
+                  <input type="radio" name="nourriture" value="Oui"  /> <label >Oui</label><br />
 
-                  <input type="radio" name="nourriture" value="Non" id="Non" /> <label for="Non">Non</label><br />
+                  <input type="radio" name="nourriture" value="Non"  /> <label >Non</label><br />
             </p>
             <br>
             <p>
 
                   Avez-vous plus de 18 ans ?<br />
 
-                  <input type="radio" name="majeur" value="Oui" id="Oui" /> <label for="Oui">Oui</label><br />
+                  <input type="radio" name="majeur" value="Oui"  /> <label >Oui</label><br />
 
-                  <input type="radio" name="majeur" value="Non" id="Non" /> <label for="Non">Non</label><br />
+                  <input type="radio" name="majeur" value="Non"  /> <label >Non</label><br />
             </p>
             <br>
 	    <p>Choisissez une date de soirée à participer :</p>
@@ -109,18 +109,18 @@
 
                   Voulez-vous participer au Tournoi ?<br />
 
-                  <input type="radio" name="Tournoi" value="Oui" id="Oui" /> <label for="Oui">Oui</label><br />
+                  <input type="radio" name="Tournoi" value="Oui"  /> <label >Oui</label><br />
 
-                  <input type="radio" name="Tournoi" value="Non" id="Non" /> <label for="Non">Non</label><br />
+                  <input type="radio" name="Tournoi" value="Non"  /> <label >Non</label><br />
             </p>
 	    <br>
 	    <p>
 
                   Voulez-vous participer à la session fun ?<br />
 
-                  <input type="radio" name="SessionFun" value="Oui" id="Oui" /> <label for="Oui">Oui</label><br />
+                  <input type="radio" name="SessionFun" value="Oui"  /> <label >Oui</label><br />
 
-                  <input type="radio" name="SessionFun" value="Non" id="Non" /> <label for="Non">Non</label><br />
+                  <input type="radio" name="SessionFun" value="Non"  /> <label >Non</label><br />
             </p>
 	    
 
@@ -134,7 +134,7 @@
 
 
     <footer><p><a href="INDEX.php"> Cliquez ici</a> pour revenir à la page principale.</p></footer>
-	<script type="text/javascript">
+	<script >
                var frmvalidator = new Validator("Register");
                //Nom équipe validator
                frmvalidator.addValidation("nom","req","Vous devez entrer votre nom");

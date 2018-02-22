@@ -11,7 +11,7 @@
 		<header><div class="headlog"><p><a href="REGISTER.php">S'inscrire</a></p></div></header>
    		<form method="post" action="connect.php">
 
-    		<legend><center>Connexion à l'espace membre ASIMOV</center></legend>
+    		
 
     			<div class="form-group">
       			<label class="col-lg-2 control-label">Adresse e-mail</label>
@@ -27,8 +27,8 @@
       				</div>
     			</div>
 
-			 <br/><br/><center><button type="submit" name="submit" class="btn btn-primary">Se connecter
-			 </button></center>
+			 <br/><br/><button type="submit" name="submit" class="btn btn-primary">Se connecter
+			 </button>
 	   	</form><br/><br/>
 		
 		<footer><p><a href="INDEX.php"> Cliquez ici</a> pour revenir à la page principale.</p></footer>

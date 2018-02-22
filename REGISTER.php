@@ -64,7 +64,7 @@
             <p>Charte de l'association :</p>
             <br>
             
-             <object data="STATUTS.pdf" type="application/pdf" width="600" height="800">
+             <object data="http://info.univ-lemans.fr/~l2info012/STATUTS.pdf" type="application/pdf" width="600" height="800">
                
              </object>
 

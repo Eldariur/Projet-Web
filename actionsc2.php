@@ -11,7 +11,7 @@
 	
 	<?php
 	try{
-		$bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+		$bdd = new PDO('mysql:host=localhost;dbname=l2info;charset=utf8', 'l2infoetu', 'webdyn72',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 	}
 	catch (Exception $e){
 		die('Erreur : ' . $e->getMessage());
@@ -19,7 +19,7 @@
 	?>
 
 	<?php
-	// condition disponibilité e-mail
+	// condition disponibilité nom equipe
 	$req1 = $bdd->prepare('SELECT equipe FROM eventsc2 WHERE equipe=:equipe');
 	$req1->execute(array(
 		'equipe' => $_POST['equipe']
@@ -61,7 +61,7 @@
 	?>
 		<p>Sachant que vous êtes mineur, veillez à apporter ce certificat :</p>
 		<br>
-		<object data="AutorisationParentale.pdf" type="application/pdf" width="600" height="800">
+		<object data="http://info.univ-lemans.fr/~l2info012/AutorisationParentale.pdf" type="application/pdf" width="600" height="800">
     	</object>
 
 	<?php

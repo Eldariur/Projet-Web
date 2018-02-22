@@ -7,10 +7,11 @@
     	<link href="monstyle.css" rel="stylesheet" media="all">
    </head>
 
-   <body>
+  <body>
 
     <header>
-       <?php
+     <!-- Afficher les boutons S'inscrire et Se connecter aucune session n'est active--> 
+    <?php
     session_start();
     if(!isset($_SESSION['id']) AND !isset($_SESSION['name']))
     {
@@ -21,9 +22,8 @@
     }
 
     ?>
-
-      
     </header>
+    <!-- Afficher le bouton Se déconnecter si un utilisateur est connecté-->
     <?php
     
     if(isset($_SESSION['id']) AND isset($_SESSION['name']))
@@ -40,36 +40,23 @@
 
     <h1>Bienvenue sur l'espace membre ASIMOV </h1>
     <br/><br/><br/>
-    <?php
     
-    if(!isset($_SESSION['id']) AND !isset($_SESSION['name']))
-    {
-    ?>
-	<br><br><br>
+    
+   
+	 <br><br><br>
 
-	<p>
-	<strong>Evénements :</strong>
+	 <p>
+	 <strong>Evénements :</strong>
 	 
-	</p>
-	<br>
-	<p>
-	<a href="EVENTSC2.php">Tournoi StarCraft 2</a> 
-	</p>
-<br>
-	<p>
-	<a href="EVENTWC3.php">LAN Warcraft 3</a>	
-	</p>
+	 </p>
+	 <br>
+	 <p>
+	 <a href="EVENTSC2.php">Tournoi StarCraft 2</a> 
+	 </p>
+   <br>
+	 <p>
+	 <a href="EVENTWC3.php">LAN Warcraft 3</a>	
+	 </p>
 	
-
-
-
-	<br><br><br>
-      <p>Créez un compte et connectez vous pour pouvoir vous inscrire aux <strong>Évenements</strong>.</p>
-    <?php
-    }
-
-    ?>
-
-
-   </body>
+  </body>
 </html>

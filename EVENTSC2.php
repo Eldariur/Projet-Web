@@ -5,22 +5,40 @@
     	<meta charset="UTF-8">
     	<title></title>
     	<link href="monstyle.css" rel="stylesheet" media="all">
+      <script src="gen_validatorv4.js" type="text/javascript"></script>
    </head>
 
    <body>
 
     <header>
+      <?php
+      session_start();
+      if(isset($_SESSION['id']) AND isset($_SESSION['name']))
+      {
+      ?>
       <div class="disconnect"><p><a href="DISCONNECT.php">Se déconnecter</a></p></div>
+      <?php  
+      }
+      ?>
+      
     </header>
+    <!-- Declaration des variables pour les places disponibles/restantes -->
+    <?php
+    try{
+      $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    }
+    catch (Exception $e){
+      die('Erreur : ' . $e->getMessage());
+    } 
+
+    $req = $bdd->query('SELECT COUNT(id) as places FROM eventsc2');
+    $places = $req->fetch();
+    $req->closeCursor();
+    $dispo = 16;
+    ?>
 		<legend><center>Espace Évenements ASIMOV</center></legend>
     <br/><br/><br/><br/>
-    <?php
-    session_start();
-    if(isset($_SESSION['id']) AND isset($_SESSION['name']))
-    {
-      echo 'Salut ' . $_SESSION['name'];
-    }
-    ?>
+    
     <br/><br/><br/><br/>
     <h1>Événement StarCraft 2</h1>
    	
@@ -36,13 +54,44 @@
     <br>
     <ul>
       <li>Equipes de 3 personnes</li>
+      <li>16 equipes</li>
       <li>Matchs en 1 contre 1</li>
       <li>Format de match standard (aucun module activé)</li>
       <li>Evenement sur 2 jours (du 26 au matin jusqu'au 27 au soir)</li>
       <li>Nourriture disponible en commande</li>
+      <li>Prix de l'inscription : 10€(Non membre) 5€(Membre)</li>
+      
 
     </ul>
+    <br>
 
+    <p>Equipes inscrites : <br>
+    <!-- Affichage du nom des équipes inscrites -->
+    <?php 
+    
+    $req = $bdd->query('SELECT equipe FROM eventsc2');
+    
+    while($equipes = $req->fetch())
+    {
+      echo $equipes['equipe']. '<br>';
+    }  
+    ?>
+      
+    </p>
+    
+    <br>
+    <!-- Affichage du nombre de places disponibles -->
+    <p>Places disponibles : 
+    <?php 
+    
+    $reste = $dispo - $places['places'];
+    echo $reste;
+
+    ?>
+    </p>
+
+
+    <!-- Formulaire d'inscription à l'événement-->
     <form id='Register' method="post" action="actionsc2.php">
           <h3>S'inscrire à l'événement StarCraft 2</h3>
           
@@ -93,7 +142,11 @@
 
 
     <footer><p><a href="INDEX.php"> Cliquez ici</a> pour revenir à la page principale.</p></footer>
-
+    <script type="text/javascript">
+               var frmvalidator = new Validator("Register");
+               //Nom équipe validator
+               frmvalidator.addValidation("equipe","req","Vous devez entrer un nom d'équipe");
+    </script>
 
    </body>
 </html>

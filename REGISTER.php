@@ -96,7 +96,7 @@
 
                //Promo validator
                frmvalidator.addValidation("promotion","selone","Vous devez indiquer votre promotion");
-               //Charte
+               //Charte validator
                frmvalidator.addValidation("charte","shouldselchk=charte","Vous devez valider la charte");
 
             </script>
